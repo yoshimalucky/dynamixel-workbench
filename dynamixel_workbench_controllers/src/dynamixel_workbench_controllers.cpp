@@ -758,6 +758,11 @@ bool DynamixelController::dynamixelCommandMsgCallback(dynamixel_workbench_msgs::
   return true;
 }
 
+void DynamixelController::getDynamixel(std::map<std::string, uint32_t> &dynamixel)
+{
+  dynamixel = dynamixel_;
+}
+
 int main(int argc, char **argv)
 {
   ros::init(argc, argv, "dynamixel_workbench_controllers");

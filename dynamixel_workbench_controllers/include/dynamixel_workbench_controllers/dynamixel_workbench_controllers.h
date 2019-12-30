@@ -126,6 +126,9 @@ class DynamixelController
   void trajectoryMsgCallback(const trajectory_msgs::JointTrajectory::ConstPtr &msg);
   bool dynamixelCommandMsgCallback(dynamixel_workbench_msgs::DynamixelCommand::Request &req,
                                    dynamixel_workbench_msgs::DynamixelCommand::Response &res);
+
+  // Add accessor function
+  void getDynamixel(std::map<std::string, uint32_t> &dynamixel);
 };
 
 #endif //DYNAMIXEL_WORKBENCH_CONTROLLERS_H
